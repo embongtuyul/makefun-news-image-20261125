@@ -1,12 +1,19 @@
 #!/usr/bin/env python3
 """main.py — make.fun news-image-20261125 entry.
 
-Copies the embedded front-page image for Wednesday 25 November 2026
-(a single-line base64 JPEG blob below) to $MAKEFUN_OUTPUT_DIR/entry.png.
+A dense 35-dated-stories front page for Wednesday 25 November 2026,
+rendered as a single 1024x1024 image: three illustrated leads (the first
+Pakistani astronaut reaching Tiangong, Trump proposing tariffs on 14
+trading partners, and the Houthi strike on Riyadh), ten illustrated
+medium cards, a numbered-pin world map, and a 22-item story list — plus
+a region bar, a UTC timestamp strip, and a DATE CHECK box listing the
+prior-day stories deliberately left out.
 
+The script copies the embedded front-page image (a single-line base64
+JPEG blob below) to $MAKEFUN_OUTPUT_DIR/entry.png. The run is fully
+deterministic: one single-run copy, the same bytes written every time.
 The output keeps the name entry.png, as the competition requires, even
-though the bytes are a JPEG. The run is fully deterministic: the same
-bytes are written every time. Python 3 standard library only.
+though the bytes are a JPEG. Python 3 standard library only.
 """
 import base64
 import os
